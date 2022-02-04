@@ -135,8 +135,7 @@ export function onSelect() {
     // let modelPath = "./models/Cube/untitled3.glb";
     // let modelPath = "./models/Duck/glTF-Draco/Duck.gltf";
     // modelPath = "./models/Crystallise/Crystallise2-draco.glb";
-    let modelPath = document.getElementById("modelPath").innerText;
-    console.log(modelPath);
+    let modelPath = document.getElementById("modelPath").innerHTML;
 
     let size = 1;
 

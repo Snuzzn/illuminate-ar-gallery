@@ -60,7 +60,8 @@ class ARButton {
           elem.appendChild(img);
           elem.addEventListener("click", () => {
             const modelPath = document.getElementById("modelPath");
-            modelPath.innerText = path[0];
+            modelPath.innerHTML = path[0];
+            // window.alert(modelPath.innerText);
           });
           projectBtns.appendChild(elem);
         }
