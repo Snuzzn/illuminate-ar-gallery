@@ -37,8 +37,8 @@ animate();
 
 function setupGui() {
   // first we create the gui panel
-  pane = new Tweakpane.Pane();
-  pane.containerElem_.style.zIndex = "1000000"; // we need to set the zIndex so it shows up on desktop correctly
+  // pane = new Tweakpane.Pane();
+  // pane.containerElem_.style.zIndex = "1000000"; // we need to set the zIndex so it shows up on desktop correctly
 
   // finally you customize the parameters
   // min is the minimum value the slider will go, max is the max value the slider will go, step is the increase at each change in the slider
