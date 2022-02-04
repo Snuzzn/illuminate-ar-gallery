@@ -39,14 +39,12 @@ function setupGui() {
   // first we create the gui panel
   // pane = new Tweakpane.Pane();
   // pane.containerElem_.style.zIndex = "1000000"; // we need to set the zIndex so it shows up on desktop correctly
-
   // finally you customize the parameters
   // min is the minimum value the slider will go, max is the max value the slider will go, step is the increase at each change in the slider
   // remember these values are in meters in WebXR
-  pane.addInput(PARAMS, "x", { min: -5, max: 5, step: 0.1 });
-  pane.addInput(PARAMS, "y", { min: -5, max: 5, step: 0.1 });
-  pane.addInput(PARAMS, "z", { min: -5, max: 5, step: 0.1 });
-
+  // pane.addInput(PARAMS, "x", { min: -5, max: 5, step: 0.1 });
+  // pane.addInput(PARAMS, "y", { min: -5, max: 5, step: 0.1 });
+  // pane.addInput(PARAMS, "z", { min: -5, max: 5, step: 0.1 });
   // more types of params and options can be found:
   // https://cocopon.github.io/tweakpane/
 }
