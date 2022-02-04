@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Perpetuity AR Demo</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="author" content="WebXR Academy" />
+    <!-- <link type="text/css" rel="stylesheet" href="style.css" /> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://www.unicorn-ui.com/buttons/css/buttons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <div id="mainContainer">
+      <a
+        href="https://unswilluminate.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/illuminateLogo.png" alt="logo" class="logo" />
+      </a>
+      <h1 class="title">Illuminate Projects</h1>
+      <h2 class="subtitle">AR Gallery</h2>
+      <!-- <div id="projectBtns">
+        <button class="projectBtn button button-large button-plain button-border button-circle"><img src="images/crystallise.jpg"  class="projectBtnImg" /></button>
+        <button class="projectBtn button button-large button-plain button-border button-circle"> <img src="images/cube1.jpg"  class="projectBtnImg" /></button>
+      </div> -->
+      <div id="modelPath"></div>
+      <!-- <img src="images/pancake.jpg" alt="mobius" class="mobiusImg" /> -->
+      <div class="splide" id="carousel" style="width:200px; position: absolute; bottom:0; left:25%; z-index: 1000000">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"> <img src="images/crystallise.jpg"  class="mobiusImg" /></li>
+            <li class="splide__slide"> <img src="images/pancake.jpg"  class="mobiusImg" /></li>
+            <li class="splide__slide"> <img src="images/cube1.jpg"  class="mobiusImg" /></li>
+            <li class="splide__slide"> <img src="images/synergy.jpg"  class="mobiusImg" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

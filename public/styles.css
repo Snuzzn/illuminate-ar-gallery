@@ -1,0 +1,133 @@
+body {
+	background: linear-gradient(162.37deg, #413789 0.35%, #2D365F 21.96%, #313C47 62.76%, #383C40 99.14%);
+	font-family: 'Poppins', sans-serif;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+
+h1, h2 {
+	padding: 0;
+	margin: 0;
+}
+
+.title {
+	color: #ececee;
+	font-size: 30pt;
+	font-weight: 500;
+	background: -webkit-linear-gradient(left, #ff45bc, #01d4ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+hr {
+	color: #3f4c65;
+	background-color: #3f4c65;
+	height: 2px;
+
+}
+
+.logo {
+	width: 50px;
+}
+
+
+
+.subtitle {
+	color: white;
+	font-weight: 200;
+	font-size: 16pt ;
+}
+
+
+#mainContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+}
+
+
+
+
+#ARButton {
+
+	display: block; 
+	background-color: #ec672f; 
+	color: white;
+	padding: 50px ;
+	border-radius: 20px;
+	border: none; 
+
+}
+
+#stabilising {
+	background-image: url("images/stabilization.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, 0);
+	z-index: 100000;
+	display: block;
+}
+
+
+#spawnBtn {
+	/* position: fixed;
+	top: 90vh;
+	right: 50vw; */
+	margin-bottom: 15px;
+	display: none;
+}
+
+
+#overlay {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100vh;
+	width: 100vw;
+
+}
+
+
+
+.projectBtnImg {
+	height: 20px;
+	/* margin: auto auto; */
+}
+
+
+#projectBtns {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 30px;
+}
+
+#modelPath {
+	visibility: hidden;
+}
+
+@media only screen and (min-width: 1200px) {
+	.title {
+		font-size: 50pt;
+	}
+
+	.subtitle {
+		font-size: 20pt;
+
+	}
+
+	.mobiusImg {
+		margin-top: 50px;
+		width: 500px;	
+	}
+}
