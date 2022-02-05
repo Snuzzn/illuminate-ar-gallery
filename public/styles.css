@@ -151,6 +151,10 @@ hr {
 
 	}
 
+	#carousel {
+		width: 500px
+	}
+
 	.mobiusImg {
 		margin-top: 50px;
 		width: 500px;	
