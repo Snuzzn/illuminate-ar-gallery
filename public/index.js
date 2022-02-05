@@ -1,12 +1,13 @@
 import { ARButton } from "./ARButton.js";
 import "https://unpkg.com/three@0.133.0/examples/js/loaders/GLTFLoader.js";
 import "https://unpkg.com/three@0.133.0/examples/js/loaders/DRACOLoader.js";
-import "https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js";
 import "https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js";
+import "https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js";
+
 // source of webxr api code: https://glitch.com/edit/#!/intro-to-webxr?path=README.md%3A1%3A0
 // === INTRO PAGE ===
 
-// new Splide(".splide").mount();
+new Splide(".splide").mount();
 
 let vh = window.innerHeight;
 document.body.style.height = `${vh}px`;
@@ -31,23 +32,8 @@ const PARAMS = {
   z: -0.5,
 };
 
-setupGui();
 init();
 animate();
-
-function setupGui() {
-  // first we create the gui panel
-  // pane = new Tweakpane.Pane();
-  // pane.containerElem_.style.zIndex = "1000000"; // we need to set the zIndex so it shows up on desktop correctly
-  // finally you customize the parameters
-  // min is the minimum value the slider will go, max is the max value the slider will go, step is the increase at each change in the slider
-  // remember these values are in meters in WebXR
-  // pane.addInput(PARAMS, "x", { min: -5, max: 5, step: 0.1 });
-  // pane.addInput(PARAMS, "y", { min: -5, max: 5, step: 0.1 });
-  // pane.addInput(PARAMS, "z", { min: -5, max: 5, step: 0.1 });
-  // more types of params and options can be found:
-  // https://cocopon.github.io/tweakpane/
-}
 
 function tick() {
   // Render

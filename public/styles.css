@@ -1,10 +1,14 @@
 body {
-	background: linear-gradient(162.37deg, #413789 0.35%, #2D365F 21.96%, #313C47 62.76%, #383C40 99.14%);
+	/* background: linear-gradient(162.37deg, #413789 0.35%, #2D365F 21.96%, #313C47 62.76%, #383C40 99.14%); */
+	/* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+	/* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
+	background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+ 	background-blend-mode: multiply;
 	font-family: 'Poppins', sans-serif;
 	width: 100vw;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
+	max-height: 100vh;
 }
 
 
@@ -17,7 +21,8 @@ h1, h2 {
 	color: #ececee;
 	font-size: 30pt;
 	font-weight: 500;
-	background: -webkit-linear-gradient(left, #ff45bc, #01d4ff);
+	/* background: -webkit-linear-gradient(left, #ff45bc, #01d4ff); */
+	background-color: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -120,6 +125,24 @@ hr {
 	visibility: hidden;
 }
 
+
+
+.slide {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#carousel {
+	margin-top: 30px;
+	width: 300px;
+
+}
+
+.mobiusImg {
+	width: 300px;
+}
+
 @media only screen and (min-width: 1200px) {
 	.title {
 		font-size: 50pt;
@@ -131,8 +154,11 @@ hr {
 	}
 
 	.mobiusImg {
-		margin-top: 50px;
 		width: 500px;	
+	}
+
+	#carousel {
+		width: 500px;
 	}
 }
 
