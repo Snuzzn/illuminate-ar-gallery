@@ -98,11 +98,15 @@ hr {
 
 }
 
+.projectBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 
 .projectBtnImg {
-	height: 20px;
-	/* margin: auto auto; */
+	width: 30px;
 }
 
 

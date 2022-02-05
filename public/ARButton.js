@@ -48,15 +48,16 @@ class ARButton {
           "button-circle",
         ];
         const modelPaths = [
-          ["./models/Cube/untitled3.glb", "images/cube1.jpg"],
+          ["./models/Cube/untitled3.glb", "images/cube1.png"],
           [
-            "./models/Crystallise/Crystallise2-draco.glb",
-            "images/crystallise.jpg",
+            "./models/Crystallise/Crystallise-centered-draco.glb",
+            "images/crystallise.png",
           ],
         ];
         for (const path of modelPaths) {
           const elem = document.createElement("button");
           elem.classList.add(...buttonClasses);
+          elem.style.display = "flex";
           const img = document.createElement("img");
           img.src = path[1];
           img.classList.add("projectBtnImg");

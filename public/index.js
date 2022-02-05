@@ -183,6 +183,7 @@ export function onSelect() {
       const model = gltf.scene;
       model.scale.set(size, size, size);
       model.position.setFromMatrixPosition(reticle.matrix);
+      // model.position.x = 0.5;
       // if (modelPath === "./models/Jellyfish/scene.gltf") model.position.y = 0.2;
       model.traverse(function (node) {
         if (node.isMesh) {
