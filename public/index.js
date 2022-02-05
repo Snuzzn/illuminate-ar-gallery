@@ -168,8 +168,15 @@ export function onSelect() {
         bar.animate(ratio);
         // progressBar.innerHTML = ratio;
         console.log("progressing");
+        setTimeout(() => {
+          if (bar.value() > 0.6) {
+            bar.set(0);
+            progressBar.removeChild(progressBar.firstChild);
+          }
+        }, 5000);
       },
       () => {
+        console.log(error);
         progressBar.removeChild(progressBar.lastChild);
       }
     );
