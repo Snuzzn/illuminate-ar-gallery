@@ -158,7 +158,7 @@ export function onSelect() {
             bar.set(0);
             progressBar.removeChild(progressBar.firstChild);
           }
-        }, 3000);
+        }, 5000);
       },
       () => {
         console.log(error);
