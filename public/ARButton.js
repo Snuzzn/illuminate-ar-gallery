@@ -1,5 +1,4 @@
 import { onSelect } from "./index.js";
-
 class ARButton {
   static createButton(renderer, sessionInit = {}) {
     const button = document.createElement("button");
@@ -14,6 +13,10 @@ class ARButton {
         const gif = document.createElement("div");
         gif.id = "stabilising";
         overlay.appendChild(gif);
+
+        const progressBar = document.createElement("div");
+        progressBar.id = "progressBar";
+        overlay.appendChild(progressBar);
 
         // const carousel = document.getElementById("carousel");
         // overlay.appendChild(carousel);
@@ -67,6 +70,8 @@ class ARButton {
         }
 
         overlay.appendChild(projectBtns);
+
+        // bar.animate(1);
 
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("width", 38);

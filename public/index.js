@@ -136,11 +136,44 @@ export function onSelect() {
     // let modelPath = "./models/Duck/glTF-Draco/Duck.gltf";
     // modelPath = "./models/Crystallise/Crystallise2-draco.glb";
     let modelPath = document.getElementById("modelPath").innerHTML;
-
+    if (modelPath === "") return;
     let size = 1;
-
+    var bar = new ProgressBar.Line("#progressBar", {
+      strokeWidth: 4,
+      easing: "easeInOut",
+      duration: 1400,
+      color: "#FFEA82",
+      trailColor: "#eee",
+      trailWidth: 1,
+      svgStyle: { width: "100%", height: "100%" },
+      from: { color: "#FFEA82" },
+      to: { color: "#ED6A5A" },
+      step: (state, bar) => {
+        bar.path.setAttribute("stroke", state.color);
+      },
+    });
+    const progressBar = document.getElementById("progressBar");
     // set up loader
-    const gltfLoader = new THREE.GLTFLoader();
+    const loadingManager = new THREE.LoadingManager(
+      () => {
+        console.log("loaded");
+        bar.animate(1);
+        setTimeout(() => {
+          bar.set(0);
+          progressBar.removeChild(progressBar.lastChild);
+        }, 1000);
+      },
+      (itemUrl, itemsLoaded, itemsTotal) => {
+        const ratio = itemsLoaded / itemsTotal;
+        bar.animate(ratio);
+        // progressBar.innerHTML = ratio;
+        console.log("progressing");
+      },
+      () => {
+        progressBar.removeChild(progressBar.lastChild);
+      }
+    );
+    const gltfLoader = new THREE.GLTFLoader(loadingManager);
     const dracoLoader = new THREE.DRACOLoader();
     dracoLoader.setDecoderPath("./draco/");
     gltfLoader.setDRACOLoader(dracoLoader);

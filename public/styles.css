@@ -131,3 +131,12 @@ hr {
 		width: 500px;	
 	}
 }
+
+
+#progressBar {
+  width: 150px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	/* margin-bottom: 200px; */
+}
