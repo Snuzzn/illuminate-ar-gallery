@@ -53,6 +53,7 @@ class ARButton {
             "./models/Crystallise/Crystallise-centered-draco.glb",
             "images/crystallise.png",
           ],
+          ["./models/Synergy/wood-fern.glb", "images/fern.png"],
         ];
         for (const path of modelPaths) {
           const elem = document.createElement("button");

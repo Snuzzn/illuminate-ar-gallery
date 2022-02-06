@@ -70,6 +70,16 @@ function init() {
 
   addReticleToScene();
 
+  // const color = new THREE.Color("rgb(255, 0, 0)");
+  // spotLight = new THREE.SpotLight(
+  //   color,
+  //   2,
+  //   3,
+  //   THREE.MathUtils.radToDeg(Math.PI / 3)
+  // );
+  // spotLight.position.set(0, 0.7, 0.8);
+  // scene.add(spotLight);
+
   const button = ARButton.createButton(renderer, {
     optionalFeatures: ["dom-overlay", "dom-overlay-for-handheld-ar"],
     requiredFeatures: ["hit-test"],
@@ -174,7 +184,11 @@ export function onSelect() {
     gltfLoader.load(modelPath, (gltf) => {
       const model = gltf.scene;
       model.scale.set(size, size, size);
+      if (modelPath === "./models/Synergy/wood-fern.glb") {
+        model.scale.set(size + 2, size + 2, size + 2);
+      }
       model.position.setFromMatrixPosition(reticle.matrix);
+      console.log(reticle.matrix);
       // model.position.x = 0.5;
       // if (modelPath === "./models/Jellyfish/scene.gltf") model.position.y = 0.2;
       model.traverse(function (node) {
