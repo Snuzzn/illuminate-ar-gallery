@@ -48,7 +48,7 @@ class ARButton {
           "button-circle",
         ];
         const modelPaths = [
-          ["./models/Cube/untitled3.glb", "images/cube1.png"],
+          ["./models/Cube/cube.glb", "images/cube1.png"],
           [
             "./models/Crystallise/Crystallise-centered-draco.glb",
             "images/crystallise.png",
